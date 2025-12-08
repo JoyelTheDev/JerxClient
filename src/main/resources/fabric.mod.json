@@ -3,10 +3,10 @@
   "id": "bleachhack",
   "version": "${version}",
 
-  "name": "BleachHack",
+  "name": JerxClient",
   "description": "gamer obama utility mod",
   "authors": [
-    "Bleach"
+    "Joyel"
   ],
   "contact": {
     "homepage": "https://bleachhack.org/",
