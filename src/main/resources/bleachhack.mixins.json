@@ -22,7 +22,7 @@
     "MixinCamera",
     "MixinChatScreen",
     "MixinChunkRebuildTask",
-    "MixinChunkSkylightProvider",
+    "MixinSkyLightEngine",
     "MixinClientBrandRetriever",
     "MixinClientConnection",
     "MixinClientPlayerEntity",
