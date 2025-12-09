@@ -7,13 +7,17 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import net.minecraft.world.chunk.light.ChunkSkyLightProvider;
+import net.minecraft.world.level.lighting.SkyLightEngine;
 
-@Mixin(ChunkSkyLightProvider.class)
-public class MixinChunkSkylightProvider {
+@Mixin(SkyLightEngine.class)
+public class MixinSkyLightEngine {
 
-    @Inject(method = "updateLevel", at = @At("HEAD"), cancellable = true)
-    private void updateLevel(long id, long excludedId, int level, CallbackInfoReturnable<Integer> cir) {
+    @Inject(
+        method = "propagateLevel(JJI)I",
+        at = @At("HEAD"),
+        cancellable = true
+    )
+    private void onPropagateLevel(long id, long excludedId, int level, CallbackInfoReturnable<Integer> cir) {
         if (ModuleManager.getModule(NoRender.class).isWorldToggled(4)) {
             cir.setReturnValue(0);
         }
