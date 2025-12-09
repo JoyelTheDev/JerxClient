@@ -36,7 +36,6 @@
     "MixinGameRenderer",
     "MixinInGameHud",
     "MixinInGameOverlayRenderer",
-    "MixinJsonEffectShaderProgram",
     "MixinKeyboard",
     "MixinLightmapTextureManager",
     "MixinLivingEntity",
